@@ -15,3 +15,4 @@ https://github.com/ktechedu-IoT/StudyGroup/blob/main/Work/%EA%B6%8C%EC%98%A4%EC%
 # 함수 / class (self) 이해하기
 # pop() = pop(-1) / 변수 값 지정 x -> 마지막 요소 제거
 # self.queue = [] / 리스트가 사용되는 이유?
+# isEmpty 함수 순서(?) 
