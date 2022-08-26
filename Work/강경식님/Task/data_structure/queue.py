@@ -38,7 +38,6 @@ class Queue():
 
 
 queue = Queue() 
-111
 queue.dequeue() #queue 출력, 입력값이 없으므로 "queue is Empty"출력
 queue.enqueue(1) # 1 입력
 queue.enqueue("test") # "test" 입력
