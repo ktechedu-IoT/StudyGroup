@@ -18,11 +18,11 @@ class Queue():
       self.Queue =[]
 
 #2. 자료 삽입 메소드
-   def push(self, data):
+   def enqueue(self, data):
       self.Queue.append(data)
 
 #3.  자료 출력 메소드      
-   def pop(self, value=0):
+   def dequeue(self, value=0):
       if self.isEmpty():
          print("Queue is Empty")
       else:
@@ -39,12 +39,11 @@ class Queue():
 #Queue 클래스의 인스턴스 생성
 queue = Queue()
 
-queue.pop() #Queue 출력, 입력값이 없으므로 "Queue is Empty"출력
-queue.push(1) # 1 입력
-queue.push("test") # "test" 입력
-queue.push(3) # 3 입력
-queue.pop() # 3 출력 (가장 마지막에 입력한 값)
-queue.pop() # "test" 출력
-queue.pop() # 1 입력
-queue.pop() #모든 입력값을 출력해 현재 존재하는 값이 없으므로 "Queue is Empty"출력
-queue.show()
+queue.dequeue() #Queue 출력, 입력값이 없으므로 "Queue is Empty"출력
+queue.enqueue(1) # 1 입력
+queue.enqueue("test") # "test" 입력
+queue.enqueue(3) # 3 입력
+queue.dequeue() # 3 출력 (가장 마지막에 입력한 값)
+queue.dequeue() # "test" 출력
+queue.dequeue() # 1 입력
+queue.dequeue() #모든 입력값을 출력해 현재 존재하는 값이 없으므로 "Queue is Empty"출력
