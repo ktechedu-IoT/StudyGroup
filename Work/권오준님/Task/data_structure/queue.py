@@ -12,5 +12,6 @@ https://github.com/ktechedu-IoT/StudyGroup/blob/main/Work/%EA%B6%8C%EC%98%A4%EC%
    ※단, 입력된 자료가 존재하지 않으면 "Queue is Empty" 라는 문구를 출력할 것
 '''
 
+# self 이해하기
 # pop() = pop(-1) / 변수 값 지정 x -> 마지막 요소 제거
 # self.queue = [] / 리스트로 사용되는 이유?
