@@ -40,6 +40,7 @@ stack.push(1) # 1 입력
 stack.push("test") # "test" 입력
 stack.push(3) # 3 입력
 stack.pop() # 3 출력 (가장 마지막에 입력한 값)
+
 stack.pop() # "test" 출력
 stack.pop() # 1 입력
 stack.pop() #모든 입력값을 출력해 현재 존재하는 값이 없으므로 "Stack is Empty"출력
