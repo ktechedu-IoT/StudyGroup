@@ -29,6 +29,7 @@ class Queue():
         return True if len(self.queue) == 0 else False
 
 queue = Queue()
+
 queue.dequeue()
 queue.enqueue(1)
 queue.enqueue("test")
@@ -41,6 +42,5 @@ queue.dequeue()
 
 # 함수 / class (self) 이해하기
 # pop() = pop(-1) / 변수 값 지정 x -> 마지막 요소 제거
-# self.queue = [] / 리스트가 사용되는 이유?
-# isEmpty 함수 순서(?) 
-# queue = Queue() 인데 Queue(enqueue())는 안되는 이유
+# isEmpty 함수 순서(?) / return이 사용되는 이유
+# queue = Queue() 인데 Queue().enqueue() / dequeue()는 안되는 이유
