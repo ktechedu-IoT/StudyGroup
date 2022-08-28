@@ -12,8 +12,35 @@ https://github.com/ktechedu-IoT/StudyGroup/blob/main/Work/%EA%B6%8C%EC%98%A4%EC%
    ※단, 입력된 자료가 존재하지 않으면 "Queue is Empty" 라는 문구를 출력할 것
 '''
 
+class Queue():
+    def __init__(self):
+        self.queue = []
+
+    def enqueue(self,data):
+        self.queue.append(data)
+
+    def dequeue(self):
+        if self.isEmpty():
+            print("Queue is Empty")
+        else :
+            print(self.queue.pop(0))
+
+    def isEmpty(self):
+        return True if len(self.queue) == 0 else False
+
+queue = Queue()
+queue.dequeue()
+queue.enqueue(1)
+queue.enqueue("test")
+queue.enqueue(3)
+queue.dequeue()
+queue.dequeue()
+queue.dequeue()
+queue.dequeue()
+
+
 # 함수 / class (self) 이해하기
 # pop() = pop(-1) / 변수 값 지정 x -> 마지막 요소 제거
 # self.queue = [] / 리스트가 사용되는 이유?
 # isEmpty 함수 순서(?) 
-# stack = Stack() 인데 Stack(push())는 안되는 이유
+# queue = Queue() 인데 Queue(enqueue())는 안되는 이유
