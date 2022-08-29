@@ -1,6 +1,6 @@
 import random
 
-def 판정(너, 상대): /aaaaaa
+def 판정(너, 상대):
     if 너=='묵':
         if 상대=='묵':
             승패='비김'
