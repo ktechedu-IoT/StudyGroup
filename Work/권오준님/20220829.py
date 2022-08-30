@@ -43,9 +43,9 @@ while 승패 != '비김':
     전판 = 승패
         
     self = input('나 : ')
-    상대 = random.choice(묵찌빠)
-    print("상대 :",상대)
-    승패 = 판정(self, 상대)
+    enemy = random.choice(묵찌빠)
+    print("상대 :",enemy)
+    승패 = 판정(self, enemy)
 
 if 전판 == '이김':
     print("묵찌빠 게임을 이겼습니다.")
