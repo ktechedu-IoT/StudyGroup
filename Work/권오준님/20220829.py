@@ -1,24 +1,24 @@
 import random
 
-def 판정(너, 상대):
-    if 너=='묵':
-        if 상대=='묵':
+def 판정(self, enemy):
+    if self=='묵':
+        if enemy=='묵':
             승패='비김'
-        elif 상대=='찌':
+        elif enemy=='찌':
             승패='이김'
         else:
             승패='짐'
-    elif 너=='찌':
-        if 상대=='묵':
+    elif self=='찌':
+        if enemy=='묵':
             승패='짐'
-        elif 상대=='찌':
+        elif enemy=='찌':
             승패='비김'
         else:
             승패='이김'
-    elif 너=='빠':
-        if 상대=='묵':
+    elif self=='빠':
+        if enemy=='묵':
             승패='이김'
-        elif 상대=='찌':
+        elif enemy=='찌':
             승패='짐'
         else:
             승패='비김'
@@ -28,10 +28,10 @@ def 판정(너, 상대):
 묵찌빠 = ['묵','찌','빠']
 
 while 승패 == '비김':
-    너 = input('나 : ')
-    상대 = random.choice(묵찌빠)
-    print("상대 :",상대)
-    승패 = 판정(너, 상대)
+    self = input('나 : ')
+    enemy = random.choice(묵찌빠)
+    print("상대 :",enemy)
+    승패 = 판정(self, enemy)
     if 승패 == '비김':
         print("가위바위보에서 비겼습니다.\n")
 
@@ -42,13 +42,13 @@ while 승패 != '비김':
         print("상대가 가위바위보에서 졌습니다.\n")
     전판 = 승패
         
-    너 = input('나 : ')
+    self = input('나 : ')
     상대 = random.choice(묵찌빠)
     print("상대 :",상대)
-    승패 = 판정(너, 상대)
+    승패 = 판정(self, 상대)
 
 if 전판 == '이김':
     print("묵찌빠 게임을 이겼습니다.")
 else:
     print("묵찌빠 게임에서 졌습니다.")
-    #
+    
