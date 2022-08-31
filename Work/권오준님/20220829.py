@@ -1,6 +1,6 @@
 import random  # random 모듈
 
-def 판정(self, enemy):
+def 판정(self, enemy): # 판정 함수 정의
     if self=='묵':
         if enemy=='묵':
             승패='비김'
@@ -25,7 +25,7 @@ def 판정(self, enemy):
         else:
             승패='짐'
      
-    return 승패    # 승패는 '나'의 기준으로 작성됨
+    return 승패    # 승패는 '나'의 기준으로 작성됨 / 가위바위보 결과를 '승패'의 변수에 반환함.
 
 승패 = '비김'
 묵찌빠 = ['묵','찌','빠']
