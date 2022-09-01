@@ -42,5 +42,6 @@ queue.dequeue()
 
 # 함수 / class (self) 이해하기
 # pop() = pop(-1) / 변수 값 지정 x -> 마지막 요소 제거
-# isEmpty 함수 순서(?) / True,False 사용되는 이유  => 함수 dequeue 안의 if 문에 사용되기 때문에 bool이 쓰임
+# isEmpty 함수 순서 - dequeue 함수 뒤에 나와도 상관없는 이유는 파이썬이라서, c언어에서는 isEmpty 함수가 먼저 정의 돼야함
+# isEmpty 함수 True,False 사용되는 이유  => 함수 dequeue 안의 if 문에 사용되기 때문에 bool이 쓰임
 
