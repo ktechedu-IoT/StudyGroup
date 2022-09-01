@@ -33,7 +33,7 @@ def 판정(self, enemy): # 판정 함수 정의
 while 승패 == '비김':
     print("\"가위바위보!\"\n") # 추가
     self = input('나 : ')
-    if self not in 묵찌빠 :       # 멤버쉽 연산자 (in / not in)
+    if self not in 묵찌빠 :       # 멤버쉽(포함?) 연산자 (in / not in)
         print("다시 하세요!\n")   #  가위바위보 잘못 했을 때
         continue
     enemy = random.choice(묵찌빠)  # '묵찌빠'의 요소들 중 하나를 무작위로 뽑음
