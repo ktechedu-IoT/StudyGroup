@@ -32,14 +32,9 @@ def continue_confirm():
             print("네 또는 아니요 를 입력해주세요")
 
 while True:
-    user= int(input("가위(1) 바위(2) 보(3) 중 하나를 선택하세요>>>>"))
-
-    if user not in [1,2,3]:
-        user = int(input("잘못입력하였습니다. 다시 입력해주세요>>>>"))
-        break
-    
     for i in range(turn):
         print(f"{i+1}라운드입니다")
+        user= int(input("가위(1) 바위(2) 보(3) 중 하나를 선택하세요>>>>"))
         
         if  user == 1:
             com = random.choice([3,4,5])
