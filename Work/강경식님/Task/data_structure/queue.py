@@ -18,14 +18,16 @@ class Queue():
 
     #2. 자료 삽입 메소드
     def enqueue(self, data):
-        self.queue.append(data)
+        self.queue.insert(2,data)
     
     #3. 자료 출력 메소드
     def dequeue(self):
         if self.isEmpty():
             print("queue is Empty")
         else:
-            print(self.queue.pop(0))
+            print(self.queue[0])
+            del self.queue[0]
+           
 
     def isEmpty(self):
         return True if len(self.queue) == 0 else False
