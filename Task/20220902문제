@@ -49,3 +49,31 @@
    - 입력값: "b21"
    - 출력값: 00010101
    - 비고: 10진수의 선두에 'b'가 존재하는 경우, 2진수를 출력할 것
+   
+#+++++패턴 ① 샘플 코드+++++
+
+def calculator(datas):
+    dataList = sep(datas)
+    rtn = 0
+
+    if dataList[1]=='+':
+        rtn = dataList[0]+dataList[2]
+    return rtn
+            
+def sep(datas:str):
+    dataList = []
+    tmp = ''
+    for data in datas:
+        if data.isdecimal():
+            tmp += data
+        else:
+            dataList.append(int(tmp))
+            dataList.append(data)
+            tmp = ''
+    if tmp:
+        dataList.append(int(tmp))
+    return dataList
+
+datas = input("계산식을 입력해주세요. >>")
+result = calculator(datas)
+print(result)
