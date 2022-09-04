@@ -1,75 +1,109 @@
+#공백 제거 및 오류 코드
+def Blank(nums):
+    remove_set=' '
+    blank=[i for i in nums if i not in remove_set]
+    for j in blank:
+        if j.isalpha():
+           return 'a'
+    for k in range(0,len(blank),1):
+        if blank[k]=='/' and blank[k+1]=='0':
+            return 'b'
+    
+    return blank
 
-''' 1 차 테스트
+# 사칙연산 구하기
 def arithmetic(list):
     count = len(list)
-    test= ['+','-','/','*']
-    for i in range(0,count,1):
-        if list[i] in test:   
-            yield i
-            
-
-def calcu(num):
-    result = 0
-    conver = 0
-
-    for j in arithmetic(num):
-       print(num[int(arithmetic(num))])
-
-num = list(input())
-calcu(num)
-
-'''
-
-''' 2차 
-# 사칙연산 인덱스 구하기
-def arithmetic(list,count):
     sign=[]
     test= ['+','-','/','*']
     for i in range(0,count,1):
         if list[i] in test:   
-            sign.append(int(i))
+            sign.append(list[i])
     return sign
 
 # 숫자 나누기
 def convers(num):
-    count = len(num)
     numberring = []
-    conver = 0
-    for k in count:
+    conver = ''
+    for k in num:
         if k.isdigit():
             conver+=k
         else:
             numberring.append(int(conver))
+            conver=''
     numberring.append(int(conver))
     return numberring
 
-#우선순위
-def Priority(nums):
-    sign = arithmetic(nums)
-    resize=[]
-    for i in sign:
-            if nums[i]=='*':
-                resize.append(i)
-            elif nums[i] == '/':
-                resize.append(i)]
-    for i in sign:
-        if resize not in sign
-            resize.append(i)
 #계산하기
 def calcu(nums):
-    number=convers(nums)
-    arithm= Priority
-    result = 0
-    for i in range(0,len(number),2): 
-        for j in arithm:
-            if nums[j]=='*' or '%':
-                if nums[j]=='*':
+    blank=Blank(nums)
+    if blank=='a':
+        return "non-numeric value Error"
+    elif blank=='b':
+        return "divided by zero Error"
+    number=convers(blank)
+    arithm=arithmetic(blank)
+    result=0
+    j=0
+    k=0
+    if k ==0 :
+        for i in range(0,len(arithm),1): 
+            if arithm[i]=='*' or '/' :
+                if arithm[i]=='*':
                     result = number[i] * number[i+1]
-                elif nums[j] == '/':
+                    number.pop(i+1)
+                    number.pop(i)
+                    arithm.pop(i)
+                    k+=1
+                    break
+                elif arithm[i] == '/':
                     result = number[i] / number[i+1]
-            elif
+                    number.pop(i+1)
+                    number.pop(i)
+                    arithm.pop(i)
+                    k+=1
+                    break
+    if k ==0 :
+        for i in range(0,len(arithm),1): 
+            if k==0 and arithm[i]=='+' or '-' :
+                if arithm[i]=='+':
+                    result = number[i] + number[i+1]
+                    number.pop(i+1)
+                    number.pop(i)
+                    arithm.pop(i)
+                    k+=1
+                    break
+            elif arithm[i] == '-':
+                result = number[i] - number[i+1]
+                number.pop(i+1)
+                number.pop(i)
+                arithm.pop(i)
+                k+=1
+                break
+    while not number==[] and k==1:
+        if arithm[j]=='*':
+            result *=number[j]
+            number.pop(j)
+            arithm.pop(j)
+        elif arithm[j] == '/':
+            result /= number[j]
+            number.pop(j)
+            arithm.pop(j)
+        elif arithm[j] == '+':
+            result += number[j]
+            number.pop(j)
+            arithm.pop(j)
+        elif arithm[j] == '-':
+            result -= number[j]
+            number.pop(j)
+            arithm.pop(j)
+        j+=1
+    if type(result)==float:
+        return int(result * (10**4))/(10**4)
+    return result
+        
+num = input()
+result = calcu(num)
+print(result)
 
-'''
-#수정 필요사항
-#사칙연산 수정시 숫자 순서 맞춰서 변경이 필요 (해결시 패턴 5)
-#패턴 7 8 숫자 나누기에서 처리 하기
+
