@@ -5,8 +5,7 @@
 answer = ['네','안 온 거 같아요~']
 
 yesNo 함수 정의
--while문(count<=8)
-  -count +=1
+-while문 (len(학생명단))
   -input 학생명
   -'네' or '안 온 거 같아요~' 출력 / 랜덤모듈 사용
 
