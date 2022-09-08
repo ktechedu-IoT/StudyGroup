@@ -21,6 +21,7 @@ def win_or_defeated(user, com):
         draw +=1
         return "비겼습니다~"
 
+
 def continue_confirm():
     while True:
         user = input("\n다시 하시겠습니까? : 네, 아니요 >>>>")
