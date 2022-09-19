@@ -1,0 +1,34 @@
+import random as ran
+
+d=int(input("참가자 인원 수를 입력하세요 :  "))
+list_a=[]
+print("="*30)
+print(f"참가자 : {d}명".center(22))
+print("="*30)
+
+for i in range(d):
+    a=int(ran.randint(1,6))
+    b=int(ran.randint(1,6))
+    c=int(ran.randint(1,6))
+    if a==b==c:
+        e=10000+a*1000
+        list_a.append(e)
+    elif a==b:
+        e=1000+a*1000
+        list_a.append(e)
+    elif b==c:
+        e=1000+b*1000
+        list_a.append(e)
+    elif c==a:
+        e=1000+c*1000
+        list_a.append(e)
+    else:
+        e=max(a,b,c)*1000
+        list_a.append(e)
+    
+    print(f"{i+1}번째 순서 : {a,b,c} : 상금 {e}원\n")
+print(list_a)
+#list_a.sort()
+list_b=sorted(list_a)
+print(list_b)
+print(f"가장 많은 상금은 {max(list_a)}원 입니다.")
