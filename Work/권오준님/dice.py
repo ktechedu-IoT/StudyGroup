@@ -26,8 +26,8 @@
 import random
 
 # users=[]
-s=[]
 # sub = []
+s=[]
 total=[]
 money = []
 user = int(input('참가인원 : '))
@@ -48,8 +48,7 @@ for i in range(user):
     if len(set(total[i])) ==1:
         # mon = (total[i]) * 1000 + 10000 / TypeError: can only concatenate list (not "int") to list --> 됐다 안됐다 하는 이유..?
         mon = max(total[i]) * 1000 + 10000
-        money.append(mon)
- 
+        money.append(mon) 
         s.append(set(total[i]))
     
     elif len(set(total[i])) ==2:  
