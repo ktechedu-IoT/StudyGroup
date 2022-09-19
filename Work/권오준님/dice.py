@@ -27,13 +27,13 @@ import random
 
 # users=[]
 s=[]
-sub = []
+# sub = []
 total=[]
 money = []
 user = int(input('참가인원 : '))
 j=0
 mon=0
-a=[]
+
 
 
 for i in range(user):    
@@ -73,8 +73,8 @@ for i in range(user):
 print('-'*40)
 print('<가장 많은 상금 :{}원>'.format(max(money)))
    
-print(money)
-print(s)
+#print(money)
+#print(s)
 
 
 
