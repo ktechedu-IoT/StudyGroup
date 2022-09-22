@@ -1,0 +1,45 @@
+import random 
+fin =[]
+score = []
+ans = ['o','x']
+n = int(input('OX 퀴즈 횟수 : '))
+
+c=[]
+c_s=[]
+
+for i in range(n):
+    ox = []
+    s=[]
+    for j in range(10):
+        quiz = random.choice(ans)
+        ox.append(quiz)
+        if ox[j] == 'o':
+            s.append('1')
+        elif ox[j] == 'x':
+            s.append('0')
+    fin.append(ox)
+    score.append(s)
+b=0
+for i in range(n):
+    a=[]
+    for j in range(10):
+        if score[i][j] == '1' :
+            b+=1
+            a.append(b)
+        elif j==9:
+            b=0
+        elif score[i][j] == '0':
+            b=0
+            a.append(b)
+    c.append(a)
+    c_s.append(sum(c[i]))
+
+
+print('-'*60)
+for i in range(n):
+    print(f'{fin[i]} : {c_s[i]}점')
+print('-'*60)
+print('** 테스트 결과 **')
+c_s.sort(reverse=True)
+for i in range(3):
+    print(f'{i+1}등 : {c_s[i]}점')
