@@ -1,0 +1,31 @@
+import random as rad
+
+n=int(input("테스트 횟수를 입력하세요 : "))
+print("="*30)
+print(f"OX퀴즈 테스트 횟수 : {n}회".center(20))
+print("="*30)
+
+list_a=[]
+list_c=[]
+for i in range(n):
+    list_b=[]
+    k=0
+    result=0
+    for j in range(10):
+        r=rad.choice(['O','X'])
+        list_b.append(r)
+        if list_b[j]=='O':
+            k+=1
+            result+=k
+        else:
+            k=0
+    list_a.append(list_b)
+    list_c.append(result)
+    print(f"{list_a[i]} >>> {result}\n")
+list_c.sort()
+
+print("="*30)
+print("OX퀴즈 테스트 결과".center(20))
+print("="*30)
+print(f"최종우승 1등:{list_c[-1]}, 2등:{list_c[-2]}, 3등:{list_c[-3]}")
+print("="*30)
