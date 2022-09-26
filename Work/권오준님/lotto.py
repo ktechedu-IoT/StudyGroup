@@ -23,6 +23,7 @@ print('당첨번호 :',winning_num)
 print('-'*50)
 
 i = 0
+
 while len(auto_result) != n:
 
     number =  []
