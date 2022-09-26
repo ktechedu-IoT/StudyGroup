@@ -14,6 +14,6 @@ for i in range(1,10,1):
     if minnum > list[i-1]-list[i]:
         minnum=i
 print(f"최대 {list[maxnum-1]},{list[maxnum]}")
-print(f"최대 {list[minnum-1]},{list[minnum]}")
+print(f"최소 {list[minnum-1]},{list[minnum]}")
 
     
