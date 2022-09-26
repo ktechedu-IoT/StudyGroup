@@ -7,11 +7,13 @@ auto_result=[]
 
 while len(winning_num) !=6:
     a = ran.randint(1,45)
+    
     if a not in winning_num:
         winning_num.append(a)
 
 while len(winning_num) !=7:
     bonus = ran.randint(1,45)
+
     if bonus not in winning_num:
         winning_num.append(bonus)
 
@@ -22,15 +24,21 @@ print('-'*50)
 
 i = 0
 while len(auto_result) != n:
+
     number =  []
+
     while len(number) != 7:
         random = ran.randint(1,45)
+
         if random not in number:
             number.append(random)
+        
         number.sort()  
+
     auto_result.append(number)
     set_number = set(number)
     set_winning_num = set(winning_num)
+
     if len (set_number.intersection(set_winning_num)) <=2:
         print(f'{auto_result[i]} : 꽝')  
     elif len (set_number.intersection(set_winning_num)) == 3:
@@ -43,6 +51,7 @@ while len(auto_result) != n:
         print(f'{auto_result[i]} : 1등')
         if bonus in number[i]:
             print(f'{auto_result[i]} : 2등')
+    
     i+=1    
 
 
