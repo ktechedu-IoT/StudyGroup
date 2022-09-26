@@ -8,7 +8,6 @@ while bonus in winning :
 def compare(num):
     global total
     count=0
-    #bounsresult=set(num)-set(winning)
     result=set(num)&set(winning)
     if bonus not in num:
         count=len(result)
@@ -33,28 +32,6 @@ def compare(num):
             total["꼴등"]+=1
             return "꼴"
 
-
-'''
-    if 2<=len(list(result))<=5:
-        count=len(list(result))
-        if bonus in list(bounsresult):
-            count+=1
-            if count==6:
-                return 2
-            else :
-                count=8-count
-                return count 
-        elif count >=3:
-                count=8-count
-                return count
-        else :
-            return "꼴" 
-    elif len(list(result))==6:
-        return 1
-    else:
-        return "꼴"    
-        '''
-    
 def auto():
     num=int(input("자동횟수 : "))
     for i in range(num):
@@ -68,10 +45,10 @@ def manual():
    
     while len(looto)<6: 
         num1 = int(input(f"{len(looto)+1}번째 번호를 입력해주세요"))
-        if num1 not in looto :
-            looto.append(num1)
-        elif num1>45:
+        if num1>45 :
             print("숫자가 너무 큽니다")
+        elif num1 not in looto :
+            looto.append(num1)
         else:
             print("중복값입니다.")
     a= compare(looto)
