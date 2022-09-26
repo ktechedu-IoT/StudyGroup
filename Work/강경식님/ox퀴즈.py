@@ -18,19 +18,22 @@ for i in range(xx):
         if result[h] == 'o':
             point += 1
             score += point
+            print(score)
         elif result[h] == 'x':
             point = 0
       
-
+    
+    
     print("-"*50)
     print(f"{result} : {score}점 입니다.")
     print("-"*50)
-
+    
     ranking.append(score)
     ranking.sort(reverse=True)
-print("등수닷\n")    
+print("등수닷\n")
     
 for q in range(3):
+     
     print(f'{q+1}등 : {ranking[q]}점')   
 print("-"*50)
         
