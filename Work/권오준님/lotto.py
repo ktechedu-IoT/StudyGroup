@@ -20,6 +20,7 @@ while len(winning_num) !=7:
 winning_num.sort()
 
 print('당첨번호 :',winning_num)
+print('보너스 번호 :', bonus)
 print('-'*50)
 
 i = 0
