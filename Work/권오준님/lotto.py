@@ -7,7 +7,7 @@ auto_result=[]
 
 while len(winning_num) !=6:
     a = ran.randint(1,45)
-    
+
     if a not in winning_num:
         winning_num.append(a)
 
@@ -20,9 +20,11 @@ while len(winning_num) !=7:
 winning_num.sort()
 
 print('당첨번호 :',winning_num)
+print('보너스 번호 :', bonus)
 print('-'*50)
 
 i = 0
+
 while len(auto_result) != n:
 
     number =  []
