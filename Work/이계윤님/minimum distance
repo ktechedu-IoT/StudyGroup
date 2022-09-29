@@ -1,0 +1,21 @@
+import random as rad
+
+num=[]
+for i in range(10):
+    num.append(rad.randint(1,100))
+num.sort()
+print(num)
+
+list_a=[]
+for i in range(1,10):
+    distance=num[i]-num[i-1]
+    list_a.append(distance)
+print(list_a)
+print(min(list_a))
+print(max(list_a))
+
+n= list_a.index(min(list_a))
+m= list_a.index(max(list_a))
+
+print(f"최소값의 순서쌍은{(num[n],num[n+1])}입니다.")
+print(f"최대값의 순서쌍은{(num[m],num[m+1])}입니다.")
