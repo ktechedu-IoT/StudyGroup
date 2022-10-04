@@ -18,7 +18,6 @@ for i in range(xx):
         if result[h] == 'o':
             point += 1
             score += point
-            print(score)
         elif result[h] == 'x':
             point = 0
       
