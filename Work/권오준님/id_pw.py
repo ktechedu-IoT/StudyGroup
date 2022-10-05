@@ -3,7 +3,7 @@ import getpass  # 입력값 안보이게 하는법
 info = []
 i =0
 while True:
-    check = str(getpass.getpass("1. 회원가입\n2. 정보확인\n3. id 찾기\n4. pw 찾기\n5. 나가기"))
+    check = str(getpass.getpass("1. 회원가입\n2. 정보확인\n3. id 찾기\n4. pw 찾기\n5. 비밀번호 변경하기\n6. 나가기"))
     print("-"*40)
     if check == '1' or check == '회원가입':
 
@@ -68,7 +68,7 @@ while True:
                 print("가입 정보가 없습니다.")
                 print("-"*40)
                 pw_name = str(input("이름을 입력하세요 : "))
-                pw_id = str(input("pw를 입력하세요 : "))
+                pw_id = str(input("id를 입력하세요 : "))
                 print("-"*40)
                 
             elif pw_name in info and pw_id in info:     # pw_name과 pw_id의 입력값이 실제와 다르더라도
@@ -78,6 +78,33 @@ while True:
                         print("-"*40)
                 break
             
-    elif check == '5' or check == '나가기':
+    elif check == '5' or check =='비밀번호 변경하기':
+        change_id = str(input("id를 입력하세요 : "))
+        print("-"*40)
+        while True:
+            if change_id not in info:
+                print("가입 정보가 없습니다.")
+                print("-"*40)
+                change_id = str(input("id를 입력하세요 : "))
+                print("-"*40)
+                
+            elif change_id in info:  
+                change_pw = str(input("pw를 입력하세요 : "))
+                print("-"*40)
+                if change_pw[::-1] not in info:
+                    print("-"*40)
+                
+                elif change_pw[::-1] in info:
+                    new_pw = str(input("새로운 pw를 입력하세요 : "))
+                    print("-"*40)
+                    for i in range(0,len(info),3):          
+                        if change_id == info[i+1]:
+                            del info[i+2]
+                            info.insert(i+2,new_pw[::-1])      
+                            print("비밀번호가 변경되었습니다.")     
+                            print("-"*40)             
+                    break
+                    
+    elif check == '6' or check == '나가기':
         break
                 
