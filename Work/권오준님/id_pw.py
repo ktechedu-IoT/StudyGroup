@@ -52,8 +52,8 @@ while True:
                 id_pw = str(input("pw를 입력하세요 : "))
                 print("-"*40)
             
-            elif id_name in info and id_pw[::-1] in info:
-                for i in range(0,len(info),3):
+            elif id_name in info and id_pw[::-1] in info: # reversed된 id_pw 값이 실제 비밀번호와 달라도  
+                for i in range(0,len(info),3):            # info 안에 있는 값이라면 허용됌..ㅠ
                     if id_name == info[i]:
                         print(f"id : {info[i+1]}")
                         print("-"*40)
