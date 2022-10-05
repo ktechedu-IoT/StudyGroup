@@ -71,8 +71,8 @@ while True:
                 pw_id = str(input("pw를 입력하세요 : "))
                 print("-"*40)
                 
-            elif pw_name in info and pw_id in info:
-                for i in range(0,len(info),3):
+            elif pw_name in info and pw_id in info:     # pw_name과 pw_id의 입력값이 실제와 다르더라도
+                for i in range(0,len(info),3):          # info 안에 있는 값이라면 허용됌..ㅠ
                     if pw_name == info[i]:
                         print(f"pw : {info[i+2][::-1]}")
                         print("-"*40)
