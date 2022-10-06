@@ -92,8 +92,11 @@ while True:
                 change_pw = str(input("pw를 입력하세요 : "))
                 print("-"*40)
                 if change_pw[::-1] not in info:
+                    print("가입 정보가 없습니다.")
                     print("-"*40)
-                
+                    change_pw = str(input("pw를 입력하세요 : "))
+                    print("-"*40)
+
                 elif change_pw[::-1] in info:
                     new_pw = str(input("새로운 pw를 입력하세요 : "))
                     print("-"*40)
