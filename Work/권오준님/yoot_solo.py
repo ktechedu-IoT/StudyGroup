@@ -1,6 +1,6 @@
 import random as rd
 
-users = int(input("몇명이 참가할지 정하시오 : "))
+#users = int(input("몇명이 참가할지 정하시오 : "))
 times = int(input("몇번 던질지 정하시오 : "))
 
 map_a = [0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40]
@@ -19,8 +19,8 @@ while True:
     for i in range(0,times):
         
         if a!=5 and a!=10 and a!=15:
-            yoot_1 = rd.randint(1,5)
-            a+=yoot_1
+            yoot = rd.randint(1,5)
+            a+=yoot
               
             if a>20:
                 a=0 
@@ -28,7 +28,7 @@ while True:
             else:
                 total.append(map_a[a])
            
-            print('yoot:', yoot_1)
+            print('yoot:', yoot)
             print('a:',a)
             print('b:',b)
             print('c:',c)
@@ -37,8 +37,8 @@ while True:
 
         elif a == 5 :
             
-            yoot_2 = rd.randint(1,5)
-            b+=yoot_2
+            yoot = rd.randint(1,5)
+            b+=yoot
                
             if b>=8:
                 b=0
@@ -47,7 +47,7 @@ while True:
             else:
                 total.append(map_b[b])
             
-            print('yoot:', yoot_2)
+            print('yoot:', yoot)
             print('a:',a)
             print('b:',b)
             print('c:',c)
@@ -56,8 +56,8 @@ while True:
             
         elif a==10:
            
-            yoot_3 = rd.randint(1,5)
-            c=yoot_3+c
+            yoot = rd.randint(1,5)
+            c=yoot+c
             
             if c>=7:
                 c=0
@@ -66,7 +66,7 @@ while True:
             else:
                 total.append(map_c[c])
             
-            print('yoot:', yoot_3)
+            print('yoot:', yoot)
             print('a:',a)
             print('b:',b)
             print('c:',c)
@@ -75,8 +75,8 @@ while True:
 
         elif a==15:
             
-            yoot_4 = rd.randint(1,5)
-            d+=yoot_4
+            yoot = rd.randint(1,5)
+            d+=yoot
 
             if d>=8:
                 d=0
@@ -85,7 +85,7 @@ while True:
             else:
                 total.append(map_d[d])
          
-            print('yoot:', yoot_4)
+            print('yoot:', yoot)
             print('a:',a)
             print('b:',b)
             print('c:',c)
