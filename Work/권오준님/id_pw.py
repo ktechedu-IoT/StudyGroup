@@ -110,4 +110,3 @@ while True:
                     
     elif check == '6' or check == '나가기':
         break
-                
