@@ -1,6 +1,6 @@
 import random as rd
 
-users = int(input("몇명이 참가할지 정하시오 : "))
+# users = int(input("몇명이 참가할지 정하시오 : "))
 times = int(input("몇번 던질지 정하시오 : "))
 
 map_a = [0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40]
