@@ -14,7 +14,7 @@ while True:
     b = a[1] + str(int(a[0]) + int(a[1]))[-1]
     a = b[0]+b[1]
     i+=1
-    #continue
+    
     if a==n:
         break
 
