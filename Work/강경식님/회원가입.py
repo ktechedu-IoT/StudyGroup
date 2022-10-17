@@ -39,8 +39,7 @@ while xx:
             
             a = input('이름을 입력하세요:')
             b = input('비밀번호를 입력하세요:')[::-1]
-            print(b)
-            if a == user and b == pw:
+            if a in user and b in pw:
                 print(f'id는 {idw} 입니다.')
             else:
                 print('틀렸습니다. 다시 확인해주세요')
@@ -48,7 +47,7 @@ while xx:
         if select == 4:
             c = input('이름을 입력하세요:')
             d = input('ID 를 입력하세요:')
-            if c == user or d == idw:
+            if c in user and d in idw:
                 print(f'비밀번호는 {pw} 입니다')
             else:
                 print('틀렸습니다. 다시 확인하세요')                     
