@@ -18,11 +18,13 @@ class Students:
 
         # average()가  <bound method Students.sum of <__main__.Students object at 0x0000024CFC8384C8>>
         # 라고 뜸
-        
-        #return f"{self.name}\t{self.kor}\t{self.math}\t{self.eng}\
-        # \t{self.sci}\t{self.sum()}\t{self.average()}"
-        
+        '''
+        return f"{self.name}\t{self.kor}\t{self.math}\t{self.eng}\
+         \t{self.sci}\t{self.sum()}\t{self.average()}"
+         '\' --> 이어쓰기? 위해 썼는데 띄어쓰기?가 됌
+        '''
         return f"{self.name}\t{self.kor}\t{self.math}\\t{self.eng}\t{self.sci}\t{self.sum()}\t{self.average()}"
+
 students = [
     Students("카리나",84,86,75,99),
     Students("우기  ",90,56,85,88),
@@ -34,6 +36,6 @@ students = [
 
 print("="*70)
 print("이름\t국어\t수학\t영어\t과학\t총점\t평균\n")
-for i in students:
+for i in students:   # 평소에 len(list)로 썼는데 그러지 않아도 됌
     print(i.test_result())
 print("="*70)
