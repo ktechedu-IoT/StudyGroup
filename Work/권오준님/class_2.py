@@ -19,8 +19,10 @@ class Students:
         # average()가  <bound method Students.sum of <__main__.Students object at 0x0000024CFC8384C8>>
         # 라고 뜸
         
-        return f"{self.name}\t{self.kor}\t{self.math}\t{self.eng}\t{self.sci}\t{self.sum()}\t{self.average()}"
-
+        #return f"{self.name}\t{self.kor}\t{self.math}\t{self.eng}\
+        # \t{self.sci}\t{self.sum()}\t{self.average()}"
+        
+        return f"{self.name}\t{self.kor}\t{self.math}\\t{self.eng}\t{self.sci}\t{self.sum()}\t{self.average()}"
 students = [
     Students("카리나",84,86,75,99),
     Students("우기  ",90,56,85,88),
